@@ -314,12 +314,9 @@
 
   <!-- on hover for dropdowns -->
   <script>
-
-      $('.dropdown-toggle').hover( function() {
-
-          $('.dropdown.open').removeClass('open');
-          $(this).parent('.dropdown').addClass('open');
-      });
+    $('.dropdown').hover(function(){
+      $('.dropdown-toggle', this).trigger('click');
+    });
       //    $('.dropdown-toggle').onClick( function() {
       //
       //      $(this).parent('.dropdown').addClass('open');
